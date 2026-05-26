@@ -1,0 +1,35 @@
+<nav class="bg-gray-800 text-white p-4 flex justify-between items-center">
+
+  <div class="flex gap-4">
+
+    <a
+      routerLink="/memoria"
+      class="hover:text-blue-400"
+    >
+      Memoria
+    </a>
+
+    <a
+      routerLink="/adivina"
+      class="hover:text-blue-400"
+    >
+      Adivina
+    </a>
+
+    <a
+      routerLink="/scores"
+      class="hover:text-blue-400"
+    >
+      Scores
+    </a>
+
+  </div>
+
+  <button
+    (click)="logout()"
+    class="bg-red-500 px-4 py-2 rounded"
+  >
+    Logout
+  </button>
+
+</nav>

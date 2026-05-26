@@ -1,0 +1,68 @@
+<div class="min-h-screen bg-gray-900 text-white p-8">
+
+  <div class="flex justify-between mb-6">
+
+    <h1 class="text-4xl">
+      Juego Memoria
+    </h1>
+
+    <div class="text-right">
+
+      <p class="text-xl">
+        Tiempo: {{60 - seconds}}
+      </p>
+
+      <p class="text-xl">
+        Score: {{score}}
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-6 gap-4">
+
+    @for(card of cards; track card){
+
+      <div
+        (click)="flipCard(card)"
+        class="bg-gray-700 h-32 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition"
+      >
+
+        @if(card.flipped || card.matched){
+
+          <img
+            [src]="card.image"
+            class="w-full h-full object-cover"
+          />
+
+        }@else {
+
+          <div class="w-full h-full bg-blue-500">
+
+          </div>
+
+        }
+
+      </div>
+
+    }
+
+  </div>
+
+  @if(finished){
+
+    <div class="mt-8 flex justify-center">
+
+      <button
+        (click)="startGame()"
+        class="bg-green-500 px-6 py-3 rounded-xl text-xl"
+      >
+        Jugar nuevamente
+      </button>
+
+    </div>
+
+  }
+
+</div>

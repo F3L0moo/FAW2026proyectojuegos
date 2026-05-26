@@ -1,0 +1,70 @@
+<div class="min-h-screen bg-gray-900 text-white p-8">
+
+  <h1 class="text-4xl mb-6">
+
+    Ranking Scores
+
+  </h1>
+
+  <div class="mb-4">
+
+    Total scores:
+    {{scores.length}}
+
+  </div>
+
+  <table class="w-full bg-gray-800 rounded-xl overflow-hidden">
+
+    <thead class="bg-gray-700">
+
+      <tr>
+
+        <th class="p-4 text-left">
+          Usuario
+        </th>
+
+        <th class="p-4 text-left">
+          Puntaje
+        </th>
+
+        <th class="p-4 text-left">
+          Fecha
+        </th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      @for(score of scores; track score.id){
+
+        <tr class="border-b border-gray-700">
+
+          <td class="p-4">
+
+            {{score.usuario}}
+
+          </td>
+
+          <td class="p-4">
+
+            {{score.puntaje}}
+
+          </td>
+
+          <td class="p-4">
+
+            {{score.fecha}}
+
+          </td>
+
+        </tr>
+
+      }
+
+    </tbody>
+
+  </table>
+
+</div>

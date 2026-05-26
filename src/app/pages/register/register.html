@@ -1,0 +1,65 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-900">
+
+  <div class="bg-gray-800 p-8 rounded-xl w-[450px]">
+
+    <h1 class="text-white text-3xl mb-6 text-center">
+
+      Registro
+
+    </h1>
+
+    <input
+      [(ngModel)]="nombre"
+      type="text"
+      placeholder="Nombre"
+      class="w-full p-2 rounded mb-4"
+    />
+
+    <input
+      [(ngModel)]="email"
+      type="email"
+      placeholder="Correo"
+      class="w-full p-2 rounded mb-4"
+    />
+
+    <input
+      [(ngModel)]="fechaNacimiento"
+      type="date"
+      class="w-full p-2 rounded mb-4"
+    />
+
+    <input
+      [(ngModel)]="password"
+      type="password"
+      placeholder="Contraseña"
+      class="w-full p-2 rounded mb-4"
+    />
+
+    <input
+      [(ngModel)]="confirmPassword"
+      type="password"
+      placeholder="Confirmar contraseña"
+      class="w-full p-2 rounded mb-4"
+    />
+
+    <button
+      (click)="register()"
+      class="bg-green-500 hover:bg-green-700 text-white w-full py-2 rounded"
+    >
+      Registrarse
+    </button>
+
+    <div class="mt-4 text-center">
+
+      <a
+        routerLink="/"
+        class="text-blue-400"
+      >
+        Volver al login
+      </a>
+
+    </div>
+
+  </div>
+
+</div>

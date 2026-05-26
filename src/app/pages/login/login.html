@@ -1,0 +1,43 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-900">
+
+  <div class="bg-gray-800 p-8 rounded-xl w-96">
+
+    <h1 class="text-white text-3xl mb-6 text-center">
+      Login
+    </h1>
+
+    <input
+      [(ngModel)]="email"
+      type="email"
+      placeholder="Correo"
+      class="w-full p-2 rounded mb-4"
+    />
+
+    <input
+      [(ngModel)]="password"
+      type="password"
+      placeholder="Contraseña"
+      class="w-full p-2 rounded mb-4"
+    />
+
+    <button
+      (click)="login()"
+      class="bg-blue-500 hover:bg-blue-700 text-white w-full py-2 rounded"
+    >
+      Ingresar
+    </button>
+
+    <div class="mt-4 text-center">
+
+    <a
+      routerLink="/register"
+      class="text-blue-400"
+    >
+      Crear cuenta
+    </a>
+
+  </div>
+
+  </div>
+
+</div>
